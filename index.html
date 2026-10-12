@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Професійна хімчистка меблів та килимів в Ярославі</title>
+    <title>Profesjonalne pranie mebli i dywanów w Jarosławiu</title>
     <style>
         :root { --primary: #0077b6; --secondary: #00b4d8; --dark: #22252a; --light: #f8f9fa; --accent: #2a9d8f; }
         body { font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 0; color: var(--dark); line-height: 1.6; }
-        header { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1200') no-repeat center/cover; color: white; padding: 100px 20px; text-align: center; }
+        header { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://unsplash.com') no-repeat center/cover; color: white; padding: 100px 20px; text-align: center; }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         h1 { font-size: 2.8rem; margin-bottom: 15px; }
         .subtitle { font-size: 1.3rem; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto; }
         
-        /* Кнопки */
+        /* Przyciski */
         .btn { display: inline-block; background-color: var(--accent); color: white; padding: 15px 35px; border: none; border-radius: 5px; font-size: 1.1rem; font-weight: bold; cursor: pointer; text-decoration: none; transition: 0.3s; }
         .btn:hover { background-color: #21867a; transform: translateY(-2px); }
         .messenger-buttons { margin-top: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
@@ -27,12 +27,12 @@
         .card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         .price-val { font-size: 1.8rem; color: var(--primary); font-weight: bold; margin: 15px 0; }
         
-        /* Слайдер До/Після */
+        /* Slider Przed / Po */
         .slider-wrapper { max-width: 600px; margin: 40px auto 0; padding: 0 20px; }
         .before-after-slider { position: relative; width: 100%; height: 400px; overflow: hidden; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.15); }
         .slider-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; pointer-events: none; }
-        .img-after { background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800'); } 
-        .img-before { background-image: url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800'); width: 50%; border-right: 3px solid white; } 
+        .img-after { background-image: url('https://unsplash.com'); } 
+        .img-before { background-image: url('https://unsplash.com'); width: 50%; border-right: 3px solid white; } 
         .slider-resize { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; }
         .slider-handle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px; background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.3); font-weight: bold; color: var(--dark); pointer-events: none; }
 
@@ -44,45 +44,45 @@
 </head>
 <body>
 
-    <!-- Головний екран -->
+    <!-- Ekran główny -->
     <header>
         <div class="container">
-            <h1>Професійна хімчистка меблів та килимів в Ярославі</h1>
-            <p class="subtitle">Повернемо вашим диванам та килимам первинний вигляд і свіжість за 2 години. Виїжджаємо до вас додому!</p>
-            <a href="#contact" class="btn">Викликати майстра</a>
+            <h1>Profesjonalne pranie mebli i dywanów w Jarosławiu</h1>
+            <p class="subtitle">Przywrócimy świeżość Twoim kanapom i dywanom w 2 godziny. Dojeżdżamy bezpośrednio do klienta!</p>
+            <a href="#contact" class="btn">Zarezerwuj termin</a>
             
             <div class="messenger-buttons">
-                <!-- ⚠️ ЗАМІНІТЬ 48000000000 НА ВАШ НОМЕР БЕЗ ПЛЮСА (наприклад: 48500600700) -->
-                <a href="viber://chat?number=%2B480000000000" class="btn-msgr btn-viber">Написати у Viber</a>
-                <a href="https://wa.me/48000000000" class="btn-msgr btn-whatsapp" id="wa-header-btn">Написати у WhatsApp</a>
+                <!-- ⚠️ ZAMIEŃ 48000000000 NA SWÓJ NUMER BEZ PLUSA (np: 48500600700) -->
+                <a href="viber://chat?number=%2B480000000000" class="btn-msgr btn-viber">Napisz na Viber</a>
+                <a href="https://wa.me" class="btn-msgr btn-whatsapp" id="wa-header-btn">Napisz na WhatsApp</a>
             </div>
         </div>
     </header>
 
-    <!-- Переваги -->
+    <!-- Zalety -->
     <section class="section container">
-        <h2>Чому обирають нас?</h2>
+        <h2>Dlaczego warto nas wybrać?</h2>
         <div class="grid">
             <div class="card">
-                <h3>✨ Безпечна хімія</h3>
-                <p>Використовуємо лише сертифіковані, гіпоалергенні засоби, безпечні для дітей та тварин.</p>
+                <h3>✨ Bezpieczna chemia</h3>
+                <p>Używamy wyłącznie certyfikowanych, hipoalergicznych środków, bezpiecznych dla dzieci i zwierząt.</p>
             </div>
             <div class="card">
-                <h3>⏱️ Швидка сушка</h3>
-                <p>Потужне німецьке обладнання видаляє до 95% вологи. Меблі висихають за лічені години.</p>
+                <h3>⏱️ Szybkie schnięcie</h3>
+                <p>Potężny niemiecki sprzęt usuwa do 95% wilgoci. Meble schną w zaledwie kilka godzin.</p>
             </div>
             <div class="card">
-                <h3>💪 Видалення 99% плям</h3>
-                <p>Усуваємо застарілі плями, бруд, а також неприємні запахи (сечі, сирості, тварин).</p>
+                <h3>💪 Usuwanie 99% plam</h3>
+                <p>Skutecznie likwidujemy stare plamy, uporczywy brud oraz nieprzyjemne zapachy.</p>
             </div>
         </div>
     </section>
 
-    <!-- Секція До / Після -->
+    <!-- Sekcja Przed / Po -->
     <section class="section bg-light">
         <div class="container">
-            <h2>Результати нашої роботи</h2>
-            <p>Проведіть повзунком вліво або вправо, щоб порівняти результат</p>
+            <h2>Efekty naszej pracy</h2>
+            <p>Przesuń suwak w lewo lub w prawo, aby porównać rezultat</p>
             <div class="slider-wrapper">
                 <div class="before-after-slider">
                     <div class="slider-img img-after"></div>
@@ -94,60 +94,58 @@
         </div>
     </section>
 
-    <!-- Ціни -->
+    <!-- Cennik -->
     <section class="section">
         <div class="container">
-            <h2>Орієнтовні ціни в Ярославі</h2>
+            <h2>Orientacyjny cennik w Jarosławiu</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>Хімчистка диванів</h3>
-                    <p>Прямі, кутові, модульні</p>
-                    <div class="price-val">від 50 zł / місце</div>
+                    <h3>Czyszczenie kanap</h3>
+                    <p>Kanapy proste, narożne, modułowe</p>
+                    <div class="price-val">od 50 zł / miejsce</div>
                 </div>
                 <div class="card">
-                    <h3>Хімчистка матраців</h3>
-                    <p>Одно- та двоспальні (з двох сторін)</p>
-                    <div class="price-val">від 100 zł</div>
+                    <h3>Pranie materacy</h3>
+                    <p>Jedno- i dwuosobowe (z obu stron)</p>
+                    <div class="price-val">od 100 zł</div>
                 </div>
                 <div class="card">
-                    <h3>Хімчистка килимів</h3>
-                    <p>Низький та високий ворс</p>
-                    <div class="price-val">від 20 zł / м²</div>
+                    <h3>Pranie dywanów</h3>
+                    <p>Krótkie oraz długie włosie</p>
+                    <div class="price-val">od 40 zł / m²</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Контакти та форма -->
+    <!-- Kontakt i formularz -->
     <section id="contact" class="section bg-light">
         <div class="container">
-            <h2>Замовити розрахунок вартості</h2>
-            <p>Заповніть форму, і сайт автоматично сформує повідомлення для швидкого відправлення у WhatsApp!</p>
+            <h2>Darmowa wycena i kontakt</h2>
+            <p>Wypełnij formularz, a strona automatycznie przygotuje wiadomość do szybkiego wysłania na WhatsApp!</p>
             
             <form id="whatsapp-form" style="margin-top: 30px;">
                 <div class="form-group">
-                    <input type="text" id="client-name" placeholder="Ваше ім'я" required>
+                    <input type="text" id="client-name" placeholder="Twoje imię" required>
                 </div>
                 <div class="form-group">
-                    <input type="tel" id="client-phone" placeholder="+48..." required>
+                    <input type="tel" id="client-phone" placeholder="Numer telefonu (+48...)" required>
                 </div>
-                <button type="submit" class="btn" style="background-color: #25D366;">Надіслати заявку у WhatsApp</button>
+                <button type="submit" class="btn" style="background-color: #25D366;">Wyślij zgłoszenie na WhatsApp</button>
             </form>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Професійна хімчистка меблів в Ярославі. Усі права захищено.</p>
+        <p>&copy; 2026 Profesjonalne pranie mebli w Jarosławiu. Wszelkie prawa zastrzeżone.</p>
     </footer>
 
     <script>
-        // Змінна для вашого номера телефону (Вкажіть ваш номер замість 48000000000)
-        const MY_PHONE = "48000000000"; 
+        // ⚠️ Wpisz tutaj swój numer telefonu WhatsApp zamiast 48000000000
+        const MY_PHONE = "48792845370"; 
 
-        // Оновлюємо посилання в шапці автоматично
-        document.getElementById('wa-header-btn').href = `https://wa.me/${MY_PHONE}`;
+        document.getElementById('wa-header-btn').href = `https://wa.me{MY_PHONE}`;
 
-        // Скрипт для повзунка До/Після
         const range = document.getElementById('slider-range');
         const beforeImg = document.getElementById('before-img');
         const handle = document.getElementById('handle');
@@ -158,16 +156,15 @@
             handle.style.left = `${value}%`;
         });
 
-        // Скрипт для перенаправлення форми у WhatsApp
         document.getElementById('whatsapp-form').addEventListener('submit', function(e) {
             e.preventDefault();
             
             const name = document.getElementById('client-name').value;
             const phone = document.getElementById('client-phone').value;
             
-            const text = `Привіт! Нова заявка з сайту хімчистки в Ярославі.%0A👤 Ім'я: ${encodeURIComponent(name)}%0A📞 Телефон: ${encodeURIComponent(phone)}`;
+            const text = `Dzień dobry! Nowe zgłoszenie ze strony prania mebli w Jarosławiu.%0A👤 Imię: ${encodeURIComponent(name)}%0A📞 Telefon: ${encodeURIComponent(phone)}`;
             
-            window.open(`https://wa.me/${MY_PHONE}?text=${text}`, '_blank');
+            window.open(`https://wa.me{MY_PHONE}?text=${text}`, '_blank');
         });
     </script>
 </body>
