@@ -3,169 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profesjonalne pranie mebli i dywanów w Jarosławiu</title>
+    <title>Profesjonalne Czyszczenie Chemiczne Mebli i Dywanów</title>
     <style>
-        :root { --primary: #0077b6; --secondary: #00b4d8; --dark: #22252a; --light: #f8f9fa; --accent: #2a9d8f; }
-        body { font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 0; color: var(--dark); line-height: 1.6; }
-        header { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://unsplash.com') no-repeat center/cover; color: white; padding: 100px 20px; text-align: center; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        h1 { font-size: 2.8rem; margin-bottom: 15px; }
-        .subtitle { font-size: 1.3rem; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        :root { 
+            --blue: #1e6fd9; 
+            --dark-blue: #1656b0;
+            --dark: #1c2b42; 
+            --light: #f4f8fe; 
+            --white: #ffffff;
+        }
+        
+        * { box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            color: var(--dark); 
+            line-height: 1.5;
+            background-color: var(--white);
+        }
+
+        /* Dekoracyjne elementy z ulotki */
+        .dot {
+            position: absolute;
+            background-color: var(--blue);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .dot-hero { width: 120px; height: 120px; top: -40px; right: -40px; }
+
+        .wave-container {
+            position: relative;
+            background-color: var(--white);
+            height: 40px;
+            margin-top: -40px;
+            z-index: 5;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://w3.org' viewBox='0 0 1440 100'%3E%3Cpath fill='%23ffffff' d='M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,100L1320,100C1200,100,960,100,720,100C480,100,240,100,120,100L0,100Z'%3E%3Cpath%3E%3C/svg%3E");
+            background-size: cover;
+        }
+        
+        header { 
+            position: relative;
+            background-color: var(--light);
+            padding: 60px 20px 80px 20px; 
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 20px; }
+            h1 { font-size: 2rem !important; }
+            .messenger-buttons { flex-direction: column; align-items: center; }
+            .btn-msgr { width: 100%; max-width: 300px; text-align: center; }
+        }
+        
+        h1 { 
+            font-size: 2.8rem; 
+            color: var(--blue);
+            font-weight: 800;
+            line-height: 1.1;
+            margin: 0 0 20px 0;
+            text-transform: uppercase;
+        }
+        
+        .subtitle { 
+            font-size: 1.3rem; 
+            color: var(--blue);
+            font-weight: 600;
+            margin-bottom: 30px; 
+        }
+
+        .promo-badge {
+            display: inline-block;
+            background-color: var(--blue);
+            color: var(--white);
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(30, 111, 217, 0.2);
+        }
+        
+        /* Niebieska sekcja centralna */
+        .blue-section {
+            background-color: var(--blue);
+            color: var(--white);
+            padding: 60px 20px;
+            position: relative;
+        }
+
+        .blue-section h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .blue-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            opacity: 0.95;
+        }
+
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 30px auto;
+            max-width: 400px;
+            text-align: left;
+            font-size: 1.2rem;
+        }
+
+        .contact-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .contact-list li::before {
+            content: "•";
+            position: absolute;
+            left: 10px;
+            color: var(--white);
+            font-size: 1.5rem;
+            top: -2px;
+        }
+
+        .contact-list a {
+            color: var(--white);
+            text-decoration: underline;
+            font-weight: bold;
+        }
         
         /* Przyciski */
-        .btn { display: inline-block; background-color: var(--accent); color: white; padding: 15px 35px; border: none; border-radius: 5px; font-size: 1.1rem; font-weight: bold; cursor: pointer; text-decoration: none; transition: 0.3s; }
-        .btn:hover { background-color: #21867a; transform: translateY(-2px); }
-        .messenger-buttons { margin-top: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-        .btn-msgr { padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; color: white; transition: 0.3s; }
-        .btn-viber { background-color: #7328F1; }
+        .btn { 
+            display: inline-block; 
+            background-color: var(--blue); 
+            color: var(--white); 
+            padding: 16px 40px; 
+            border: none; 
+            border-radius: 30px; 
+            font-size: 1.1rem; 
+            font-weight: bold; 
+            cursor: pointer; 
+            text-decoration: none; 
+            transition: 0.3s; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .btn:hover { 
+            background-color: var(--dark-blue); 
+            transform: translateY(-2px); 
+        }
+
+        .messenger-buttons {
+            margin-top: 25px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-msgr {
+            padding: 14px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            transition: 0.3s;
+            display: inline-block;
+        }
+        
         .btn-whatsapp { background-color: #25D366; }
+        .btn-phone { background-color: #22252a; }
         .btn-msgr:hover { opacity: 0.9; transform: translateY(-2px); }
 
-        .section { padding: 70px 0; text-align: center; }
-        .bg-light { background-color: var(--light); }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
-        .card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .price-val { font-size: 1.8rem; color: var(--primary); font-weight: bold; margin: 15px 0; }
-        
-        /* Slider Przed / Po */
-        .slider-wrapper { max-width: 600px; margin: 40px auto 0; padding: 0 20px; }
-        .before-after-slider { position: relative; width: 100%; height: 400px; overflow: hidden; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.15); }
-        .slider-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; pointer-events: none; }
-        .img-after { background-image: url('https://unsplash.com'); } 
-        .img-before { background-image: url('https://unsplash.com'); width: 50%; border-right: 3px solid white; } 
-        .slider-resize { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; }
-        .slider-handle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px; background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.3); font-weight: bold; color: var(--dark); pointer-events: none; }
+        .btn-white {
+            background-color: var(--white);
+            color: var(--blue);
+        }
+        .btn-white:hover {
+            background-color: var(--light);
+            color: var(--dark-blue);
+        }
 
+        .section { padding: 60px 20px; text-align: center; max-width: 1100px; margin: 0 auto; }
+        .section-title { font-size: 2.2rem; color: var(--blue); font-weight: bold; margin-bottom: 30px; }
+
+        .info-box {
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+            border-left: 5px solid var(--blue);
+            text-align: left;
+        }
+
+        .car-banner {
+            background-color: var(--light);
+            color: var(--blue);
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: inline-block;
+            border: 2px dashed var(--blue);
+        }
+
+        /* Slider Przed / Po */
+        .slider-wrapper { max-width: 650px; margin: 0 auto; }
+        .before-after-slider { 
+            position: relative; 
+            width: 100%; 
+            height: 0;
+            padding-bottom: 66.67%; 
+            overflow: hidden; 
+            border-radius: 12px; 
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15); 
+        }
+        
+        .slider-img { 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; pointer-events: none; 
+        }
+        
+        .img-after { background-image: url('https://unsplash.com'); } 
+        .img-before { 
+            background-image: url('https://unsplash.com'); 
+            width: 50%; border-right: 3px solid white; z-index: 2;
+        } 
+        
+        .slider-resize { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; z-index: 3; }
+        .slider-handle { 
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; background-color: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2); font-weight: bold; pointer-events: none; z-index: 4; 
+        }
+
+        /* Formularz */
+        .form-container { max-width: 500px; margin: 40px auto 0 auto; }
         .form-group { margin-bottom: 15px; }
-        .form-group input { padding: 12px; width: 100%; max-width: 400px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; box-sizing: border-box; }
-        footer { background-color: var(--dark); color: white; padding: 20px; text-align: center; font-size: 0.9rem; }
-        @media (max-width: 768px) { h1 { font-size: 2rem; } .before-after-slider { height: 300px; } }
+        .form-group input { 
+            padding: 14px; width: 100%; border: 2px solid var(--light); background-color: var(--light); border-radius: 8px; font-size: 1rem; box-sizing: border-box; transition: 0.3s;
+        }
+        .form-group input:focus {
+            border-color: var(--blue);
+            background-color: var(--white);
+            outline: none;
+        }
+        
+        footer { background-color: var(--dark); color: white; padding: 25px 20px; text-align: center; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
-    <!-- Ekran główny -->
+    <!-- Pierwszy ekran -->
     <header>
-        <div class="container">
-            <h1>Profesjonalne pranie mebli i dywanów w Jarosławiu</h1>
-            <p class="subtitle">Przywrócimy świeżość Twoim kanapom i dywanom w 2 godziny. Dojeżdżamy bezpośrednio do klienta!</p>
-            <a href="#contact" class="btn">Zarezerwuj termin</a>
-            
-            <div class="messenger-buttons">
-                <!-- ⚠️ ZAMIEŃ 48000000000 NA SWÓJ NUMER BEZ PLUSA (np: 48500600700) -->
-                <a href="viber://chat?number=%2B480000000000" class="btn-msgr btn-viber">Napisz na Viber</a>
-                <a href="https://wa.me" class="btn-msgr btn-whatsapp" id="wa-header-btn">Napisz na WhatsApp</a>
+        <div class="dot dot-hero"></div>
+        <div class="hero-grid">
+            <div style="text-align: left; z-index: 2;">
+                <div class="promo-badge">-10% zniżki na pierwsze zamówienie</div>
+                <h1>Czystość, której ufają Twoje meble</h1>
+                <p class="subtitle">Przywrócimy świeżość i komfort Twojemu domu w zaledwie 1-2 godziny!</p>
+                
+                <div class="messenger-buttons">
+                    <a href="https://wa.me" class="btn-msgr btn-whatsapp">Napisz na WhatsApp</a>
+                    <a href="tel:+48792845370" class="btn-msgr btn-phone">Zadzwoń do nas</a>
+                </div>
+            </div>
+            <div style="position: relative; text-align: center; z-index: 2;">
+                <img src="https://unsplash.com" alt="Pranie mebli" style="width: 100%; max-width: 400px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
             </div>
         </div>
     </header>
+    <div class="wave-container"></div>
 
-    <!-- Zalety -->
-    <section class="section container">
-        <h2>Dlaczego warto nas wybrać?</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>✨ Bezpieczna chemia</h3>
-                <p>Używamy wyłącznie certyfikowanych, hipoalergicznych środków, bezpiecznych dla dzieci i zwierząt.</p>
-            </div>
-            <div class="card">
-                <h3>⏱️ Szybkie schnięcie</h3>
-                <p>Potężny niemiecki sprzęt usuwa do 95% wilgoci. Meble schną w zaledwie kilka godzin.</p>
-            </div>
-            <div class="card">
-                <h3>💪 Usuwanie 99% plam</h3>
-                <p>Skutecznie likwidujemy stare plamy, uporczywy brud oraz nieprzyjemne zapachy.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sekcja Przed / Po -->
-    <section class="section bg-light">
-        <div class="container">
-            <h2>Efekty naszej pracy</h2>
-            <p>Przesuń suwak w lewo lub w prawo, aby porównać rezultat</p>
-            <div class="slider-wrapper">
-                <div class="before-after-slider">
-                    <div class="slider-img img-after"></div>
-                    <div class="slider-img img-before" id="before-img"></div>
-                    <input type="range" min="0" max="100" value="50" class="slider-resize" id="slider-range">
-                    <div class="slider-handle" id="handle">↔</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Cennik -->
+    <!-- Ulotka opis -->
     <section class="section">
-        <div class="container">
-            <h2>Orientacyjny cennik w Jarosławiu</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Czyszczenie kanap</h3>
-                    <p>Kanapy proste, narożne, modułowe</p>
-                    <div class="price-val">od 50 zł / miejsce</div>
-                </div>
-                <div class="card">
-                    <h3>Pranie materacy</h3>
-                    <p>Jedno- i dwuosobowe (z obu stron)</p>
-                    <div class="price-val">od 100 zł</div>
-                </div>
-                <div class="card">
-                    <h3>Pranie dywanów</h3>
-                    <p>Krótkie oraz długie włosie</p>
-                    <div class="price-val">od 40 zł / m²</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Kontakt i formularz -->
-    <section id="contact" class="section bg-light">
-        <div class="container">
-            <h2>Darmowa wycena i kontakt</h2>
-            <p>Wypełnij formularz, a strona automatycznie przygotuje wiadomość do szybkiego wysłania na WhatsApp!</p>
-            
-            <form id="whatsapp-form" style="margin-top: 30px;">
-                <div class="form-group">
-                    <input type="text" id="client-name" placeholder="Twoje imię" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" id="client-phone" placeholder="Numer telefonu (+48...)" required>
-                </div>
-                <button type="submit" class="btn" style="background-color: #25D366;">Wyślij zgłoszenie na WhatsApp</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Profesjonalne pranie mebli w Jarosławiu. Wszelkie prawa zastrzeżone.</p>
-    </footer>
-
-    <script>
-        // ⚠️ Wpisz tutaj swój numer telefonu WhatsApp zamiast 48000000000
-        const MY_PHONE = "48792845370"; 
-
-        document.getElementById('wa-header-btn').href = `https://wa.me{MY_PHONE}`;
-
-        const range = document.getElementById('slider-range');
-        const beforeImg = document.getElementById('before-img');
-        const handle = document.getElementById('handle');
-
-        range.addEventListener('input', (e) => {
-            const value = e.target.value;
-            beforeImg.style.width = `${value}%`;
-            handle.style.left = `${value}%`;
-        });
-
-        document.getElementById('whatsapp-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('client-name').value;
-            const phone = document.getElementById('client-phone').value;
-            
-            const text = `Dzień dobry! Nowe zgłoszenie ze strony prania mebli w Jarosławiu.%0A👤 Imię: ${encodeURIComponent(name)}%0A📞 Telefon: ${encodeURIComponent(phone)}`;
-            
-            window.open(`https://wa.me{MY_PHONE}?text=${text}`, '_blank');
-        });
-    </script>
-</body>
-</html>
+        <div class="info-box">
+            Używamy wyłącznie hipoalergicznych, ekologicznych produktów, które są całkowicie bezpieczne dla dzieci i zwierząt domowych.
+            <br><br>
