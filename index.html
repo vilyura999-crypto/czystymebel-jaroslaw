@@ -269,7 +269,8 @@
             
             const text = `Dzień dobry! Nowe zgłoszenie ze strony (ulotka).%0A👤 Imię: ${encodeURIComponent(name)}%0A📞 Telefon: ${encodeURIComponent(phone)}%0AChcę skorzystać ze zniżki -10% na pierwsze zamówienie.`;
             
-            window.open(`https://whatsapp.com\({WHATSAPP_PHONE}&text=\){text}`, '_blank');
+            const NOMER_TELEFONA = "48792845370";
+window.open('https://whatsapp.com' + NOMER_TELEFONA + '&text=' + text, '_blank');
         });
     </script>
 </body>
