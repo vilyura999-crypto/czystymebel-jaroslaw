@@ -13,7 +13,9 @@
             --white: #ffffff;
             --accent: #25D366;
         }
+        
         * { box-sizing: border-box; }
+        
         body { 
             font-family: 'Segoe UI', Arial, sans-serif; 
             margin: 0; 
@@ -22,6 +24,7 @@
             line-height: 1.5;
             background-color: var(--white);
         }
+
         .dot {
             position: absolute;
             background-color: rgba(30, 111, 217, 0.1);
@@ -29,6 +32,7 @@
             z-index: 1;
         }
         .dot-hero { width: 120px; height: 120px; top: -40px; right: -40px; }
+
         .wave-container {
             position: relative;
             background-color: var(--white);
@@ -36,12 +40,14 @@
             margin-top: -40px;
             z-index: 5;
         }
+        
         header { 
             position: relative;
             background: linear-gradient(135deg, var(--light) 0%, #e6effd 100%);
             padding: 60px 20px 80px 20px; 
             overflow: hidden;
         }
+
         .hero-grid {
             max-width: 1100px;
             margin: 0 auto;
@@ -52,6 +58,7 @@
             z-index: 2;
             position: relative;
         }
+        
         h1 { 
             font-size: 2.8rem; 
             color: var(--blue);
@@ -60,12 +67,14 @@
             margin: 0 0 20px 0;
             text-transform: uppercase;
         }
+        
         .subtitle { 
             font-size: 1.3rem; 
             color: var(--blue);
             font-weight: 600;
             margin-bottom: 30px; 
         }
+
         .promo-badge {
             display: inline-block;
             background-color: var(--blue);
@@ -77,6 +86,7 @@
             margin-bottom: 25px;
             box-shadow: 0 4px 12px rgba(30, 111, 217, 0.2);
         }
+        
         .blue-section {
             background: linear-gradient(135deg, var(--blue) 0%, var(--dark-blue) 100%);
             color: var(--white);
@@ -84,18 +94,21 @@
             position: relative;
             text-align: center;
         }
+
         .blue-section h2 {
             font-size: 2.5rem;
             font-weight: bold;
             margin-top: 0;
             margin-bottom: 15px;
         }
+
         .blue-section p {
             font-size: 1.2rem;
             max-width: 700px;
             margin: 0 auto 30px auto;
             opacity: 0.95;
         }
+
         .contact-list {
             list-style: none;
             padding: 0;
@@ -104,11 +117,13 @@
             text-align: left;
             font-size: 1.2rem;
         }
+
         .contact-list li {
             margin-bottom: 15px;
             padding-left: 30px;
             position: relative;
         }
+
         .contact-list li::before {
             content: "•";
             position: absolute;
@@ -117,12 +132,12 @@
             font-size: 1.5rem;
             top: -2px;
         }
+
         .contact-list a {
             color: var(--white);
             text-decoration: underline;
             font-weight: bold;
-        }
-        .btn { 
+        }.btn { 
             display: inline-block; 
             background-color: var(--blue); 
             color: var(--white); 
@@ -136,15 +151,18 @@
             transition: 0.3s; 
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
+        
         .btn:hover { 
             transform: translateY(-2px); 
             box-shadow: 0 6px 20px rgba(0,0,0,0.15);
         }
+
         .messenger-buttons {
             margin-top: 25px;
             display: flex;
             gap: 15px;
         }
+
         .btn-msgr {
             padding: 14px 25px;
             border-radius: 30px;
@@ -155,16 +173,20 @@
             display: inline-block;
             text-align: center;
         }
+        
         .btn-whatsapp { background-color: var(--accent); }
         .btn-phone { background-color: var(--dark); }
         .btn-msgr:hover { opacity: 0.9; transform: translateY(-2px); }
+
         .btn-white {
             background-color: var(--white);
             color: var(--blue);
         }
+
         .section { padding: 60px 20px; text-align: center; max-width: 1100px; margin: 0 auto; }
         .section-title { font-size: 2.2rem; color: var(--blue); font-weight: bold; margin-bottom: 10px; }
         .section-subtitle { font-size: 1.1rem; color: #666; margin-bottom: 40px; }
+
         .info-box {
             background-color: var(--light);
             padding: 30px;
@@ -174,6 +196,7 @@
             border-left: 5px solid var(--blue);
             text-align: left;
         }
+
         .car-banner {
             background-color: #fff9db;
             color: #f59f00;
@@ -185,12 +208,14 @@
             display: inline-block;
             border: 2px dashed #f59f00;
         }
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
             margin-top: 30px;
         }
+
         .service-card {
             background-color: var(--light);
             padding: 25px;
@@ -198,18 +223,23 @@
             text-align: left;
             border-top: 4px solid var(--blue);
         }
+
         .service-card h3 {
             color: var(--blue);
             margin-top: 0;
             font-size: 1.4rem;
         }
+
         .service-card ul {
             padding-left: 20px;
             margin: 0;
         }
+
         .service-card li {
             margin-bottom: 8px;
         }
+
+        /* Налаштування зображень робіт і круглої емблеми */
         .slider-wrapper { max-width: 650px; margin: 0 auto; }
         .before-after-slider { 
             position: relative; 
@@ -220,18 +250,21 @@
             border-radius: 12px; 
             box-shadow: 0 8px 25px rgba(0,0,0,0.15); 
         }
+        
         .slider-img { 
             position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; pointer-events: none; 
-        }.img-before-1 { background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAcHBwcIBwgJCQgMDAsMDBEQDg4QERoSFBIUEhonGB0YGB0YJyMqIiAiKiM+MSsrMT5IPDk8SFdOTldtaG2Pj8ABBwcHBwgHCAkJCAwMCwwMERAODhARGhIUEhQSGicYHRgYHRgnIyoiICIqIz4xKysxPkg8OTxIV05OV21obY+PwP/CABEIAhwENwMBIgACEQEDEQH/xAAcAAACAwEBAQEAAAAAAAAAAAACAwABBAUGBwj/2gAIAQEAAAAA+nySSSSrkkkupJJYlUlyXUqSS7qSSpJJJJJLqSSSS6kkkkkkkkkklXJJJJdSSSSSSSSSSSSS6k4fm4UK7uykqEdy5DlwAA3DRwmEZSWRFCI7YcuHdtuFZFZXdSXChS5LuXUl0NXKG6qroRqDUqqlCMqhqoNSDQjp0T5wRkUuyM5Klw7kqWhFN0PbBJo2lj4N3LA4wyblEtBMlsbVwjOBd3CjClyHJKuSVJVVKqxGhqxqDINVAqqqpGWK1rHqT4aBSbx2u06dNyyhXJQYs+jUb3PKqKxq3NoRlEcZGN4mh75CdNGducdZGoyZLGiJFE0BM7KQqupQyVQyDBqVKGhlUNSi6WqgxcoK61fAm59l8vodLBvDpdo7sjuCjmwtew2G+RkhEZ2Nromw5H6fM6tzTKnmWc0htJiSdd1ClJ4vag3bBaJ0cggCqu6gVKlVKCShqqq9WnZYq86E60/OuvUjP0elmM7zeg1MI7sc/E16jfoZbdQ2S9EjTlyQjKgY9vkehu1xpMJmIoTGMoGskG5Q8brUtzBcYreEswWkKWQUIyVKCQaqSozRuqVzOfF9i/zZl3ae2vnNpt8v03cM7ln5l2/SbycTnwyo2RlkwLAmXQv1l859B09ZtIzZltlMuyUThqOpdcLd0JG0dQSupVUADVqJaVyDUqBKg3epmuoHBUK+9X5w+j4l+bvmx4ab6HoTutGlfie9se1xmzQbWCwpCt5VajIhYzQnwnX7ulpGRkgXU2S7FkEjlhxHdIobQqXVwaYAQQCCK0BUgQalVIWPuaDnN5YKr0FfnT3fP4+PF6voBzcnlup7FjNuo/Mcju9DS+3NtzGFHkIHbmrsYRw2PV4Dsd/UyzMrCjDQBVYtkKEVcVXaMWMARMDGgdQwYohoFZ01UEaklQPOeJE+z7i1Ib3q+AdoeEr1el+WvL+g8R7Lp7NjW+Cx+h6b2ua4o3RDZY0VxltEJGG56/Dau/pa8iK5ZK0rMYRXZXJOZn6j6ZdCIlBWwbZUsRoVBkQAwZUkg1WBQv0rSD+9Pz+4+R6ouKr0DOAPM93v06mO+cc70fX0P0tOl69VRwwDZTIdiMN7jR4XrdHW7Qwqttnn0rZVyyIroJx09bWdWQDZBQyHLuCA0IY8b8oSBcklShqlpzvnoL+BZw33F7K6HmOL9D6209bp888/6bu7WuZcNumnXUA3y7OLAz0NWjwHW7Wh2hzTI7tGlDSEisrkSHCHsbmSpcgiu2VLKqqgGLxYOnlzplXVypKGk0kG4vXV8AYk2KjmbuF3Oz0tTnMLx/zz1Xa6OpzZCboOzloay7YdUk3ParH877Hf06GuY8mkCnjRNuS5Itfni6fRYQQ6q6XUKUUCpIGfLj7SM2bPJcqVVBSwUaEewn595ukdi_before_1'); width: 50%; border-right: 3px solid white; z-index: 2; }
-        .img-after-1 { background-image: url('data:image/png;base64,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_after_1'); }
-        .img-before-2 { background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAcHBwcIBwgJCQgMDAsMDBEQDg4QERoSFBIUEhonGB0YGB0YJyMqIiAiKiM+MSsrMT5IPDk8SFdOTldtaG2Pj8ABBwcHBwgHCAkJCAwMCwwMERAODhARGhIUEhQSGicYHRgYHRgnIyoiICIqIz4xKysxPkg8OTxIV05OV21obY+PwP/CABEIAhwENwMBIgACEQEDEQH/xAAcAAACAwEBAQEAAAAAAAAAAAACAwABBAUGBwj/2gAIAQEAAAAA+nySSSSrkkkupJJYlUlyXUqSS7qSSpJJJJJLqSSSS6kkkkkkkkkklXJJJJdSSSSSSSSSSSSS6k4fm4UK7uykqEdy5DlwAA3DRwmEZSWRFCI7YcuHdtuFZFZXdSXChS5LuXUl0NXKG6qroRqDUqqlCMqhqoNSDQjp0T5wRkUuyM5Klw7kqWhFN0PbBJo2lj4N3LA4wyblEtBMlsbVwjOBd3CjClyHJKuSVJVVKqxGhqxqDINVAqqqpGWK1rHqT4aBSbx2u06dNyyhXJQYs+jUb3PKqKxq3NoRlEcZGN4mh75CdNGducdZGoyZLGiJFE0BM7KQqupQyVQyDBqVKGhlUNSi6WqgxcoK61fAm59l8vodLBvDpdo7sjuCjmwtew2G+RkhEZ2Nromw5H6fM6tzTKnmWc0htJiSdd1ClJ4vag3bBaJ0cggCqu6gVKlVKCShqqq9WnZYq86E60/OuvUjP0elmM7zeg1MI7sc/E16jfoZbdQ2S9EjTlyQjKgY9vkehu1xpMJmIoTGMoGskG5Q8brUtzBcYreEswWkKWQUIyVKCQaqSozRuqVzOfF9i/zZl3ae2vnNpt8v03cM7ln5l2/SbycTnwyo2RlkwLAmXQv1l859B09ZtIzZltlMuyUThqOpdcLd0JG0dQSupVUADVqJaVyDUqBKg3epmuoHBUK+9X5w+j4l+bvmx4ab6HoTutGlfie9se1xmzQbWCwpCt5VajIhYzQnwnX7ulpGRkgXU2S7FkEjlhxHdIobQqXVwaYAQQCCK0BUgQalVIWPuaDnN5YKr0FfnT3fP4+PF6voBzcnlup7FjNuo/Mcju9DS+3NtzGFHkIHbmrsYRw2PV4Dsd/UyzMrCjDQBVYtkKEVcVXaMWMARMDGgdQwYohoFZ01UEaklQPOeJE+z7i1Ib3q+AdoeEr1el+WvL+g8R7Lp7NjW+Cx+h6b2ua4o3RDZY0VxltEJGG56/Dau/pa8iK5ZK0rMYRXZXJOZn6j6ZdCIlBWwbZUsRoVBkQAwZUkg1WBQv0rSD+9Pz+4+R6ouKr0DOAPM93v06mO+cc70fX0P0tOl69VRwwDZTIdiMN7jR4XrdHW7Qwqttnn0rZVyyIroJx09bWdWQDZBQyHLuCA0IY8b8oSBcklShqlpzvnoL+BZw33F7K6HmOL9D6209bp888/6bu7WuZcNumnXUA3y7OLAz0NWjwHW7Wh2hzTI7tGlDSEisrkSHCHsbmSpcgiu2VLKqqgGLxYOnlzplXVypKGk0kG4vXV8AYk2KjmbuF3Oz0tTnMLx/zz1Xa6OpzZCboOzloay7YdUk3ParH877Hf06GuY8mkCnjRNuS5Itfni6fRYQQ6q6XUKUUCpIGfLj7SM2bPJcqVVBSwUaEewn595ukdi_before_2'); width: 50%; border-right: 3px solid white; z-index: 2; }
-        .img-after-2 { background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAh0AAAQ0CAMAAADtzV4RAAAAAXNSR0IArs4c6QAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAWJQTFRF12xt///6aD8n/MEH+L0Q878q+cg+37BC0aI55Lxi99Jtv5FAtYRBqHkzmm0uk140jlcvhE8oc0gueE81gFQ6hVk+iV1DjmFGkmVIk2hNl2tPmm5SnXFTn3NXonZXpHhbp3tdqn5grYJjsoZntotrt49vu5JxwZV0xJl3x5x7yaB9zqKA0aeF1qyJi2VJ2bKS0a+OzKyLyKiIyaWDwqOEwKCAvZx8upl6uJZ2rItp0rSP1baU2rmX2b2e38Cf4cSm5cqrspR3rZB0poZqo4FhnXtd7M+vlHJVlndei21V79W5mX1mpotznYNsgWJJhWhRjXNeeVlB9dq9+uHGxa2UyrOaz7ift5+HvqaPsZiA/erPeF5Jb1VAaU05Z0UvXzwnXTUeUC4aSiQTzrym0sCq1cSt2ciz48+6TzcmNx4TLhEKGwYEHRMT//TbVkQ4SBEMdWdbg3pwIy9DkY+IO1FjpSQs8L/esgAFLtZJREFUeNrMvcezI1d2B/b7nXu7G90AXn6Th+TMkDPcQGplS/bKCs5Bm+Qcl1yVY7lq/cUu/xUuu8rlrXL8YJFry9nWBjknBXttWdKK3MAZcgLJyS8/AN3ocM/xvNfoB7wZytkuH3Q3OqHRwD19coBz3p2AfwbOH0N0/GrfOzhZjU5PHTj//yJE80U7uaibT3Z1r//Ny/w/Cq6d/7+/UPRZF/BR5KIo+r90U+4zAN3eqMWOFqLj//gYfPQi+HZup3bDue6O3Wy1PdGfoNiLV0l89x3/u6/2nJPVyM2Xfn4f3ftz3+3nN9xdwi0cPlr8X391i+79M6d2tLp54ChVbM_after_2'); }.img-before-3 { background-image: url('https://topaz.com.ua'); width: 50%; border-right: 3px solid white; z-index: 2; }
-        .img-after-3 { background-image: url('https://topaz.com.ua'); }
-        .img-before-4 { background-image: url('https://topaz.com.ua'); width: 50%; border-right: 3px solid white; z-index: 2; }
-        .img-after-4 { background-image: url('https://topaz.com.ua'); }
+        }
         
-        .hero-img { background-image: url('https://topaz.com.ua'); width: 100%; max-width: 400px; height: 150px; background-size: contain; background-repeat: no-repeat; background-position: center; margin: 0 auto; }
-        .main-logo { background-image: url('https://topaz.com.ua'); width: 100px; height: 100px; background-size: cover; border-radius: 50%; margin: 0 auto 20px auto; border: 3px solid white; }
+        .img-before-1 { background-image: url('https://googleusercontent.com'); width: 50%; border-right: 3px solid white; z-index: 2; }
+        .img-after-1 { background-image: url('https://googleusercontent.com'); }
+        .img-before-2 { background-image: url('https://googleusercontent.com'); width: 50%; border-right: 3px solid white; z-index: 2; }
+        .img-after-2 { background-image: url('https://googleusercontent.com'); }
+        .img-before-3 { background-image: url('https://googleusercontent.com'); width: 50%; border-right: 3px solid white; z-index: 2; }
+        .img-after-3 { background-image: url('https://googleusercontent.com'); }.img-before-4 { background-image: url('https://googleusercontent.com'); width: 50%; border-right: 3px solid white; z-index: 2; }
+        .img-after-4 { background-image: url('https://googleusercontent.com'); }
+        
+        .hero-img { background-image: url('https://googleusercontent.com'); width: 100%; max-width: 320px; height: 320px; background-size: contain; background-repeat: no-repeat; background-position: center; margin: 0 auto; }
+        .main-logo { background-image: url('https://googleusercontent.com'); width: 120px; height: 120px; background-size: contain; background-repeat: no-repeat; background-position: center; margin: 0 auto 20px auto; }
 
         .slider-resize { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; z-index: 3; }
         .slider-handle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; background-color: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2); font-weight: bold; pointer-events: none; z-index: 4; }
@@ -289,6 +322,7 @@
             h1 { font-size: 2rem !important; }
             .messenger-buttons { flex-direction: column; align-items: center; }
             .btn-msgr { width: 100%; max-width: 300px; }
+            .hero-img { width: 220px; height: 220px; }
         }
     </style>
 </head><body>
@@ -315,7 +349,7 @@
 
     <section class="section">
         <div class="info-box">
-            Dokładne czyszczenie metodą ekstrakcyjną. Usuwamy ślady kawy, wina, pisaków, szlamu i sierści zwierząt. Używamy wyłącznie hipoalergicznych, ekologicznych produktów, które są całkowicie bezpieczne dla dzieci i zwierząt domowych. 
+            Dokładne czyszczenie metodą ekstrakcyjną. Usuwamy ślady kawy, wina, pisaków, szlamu i sierści zwierząt. Używamy wyłącznie hipoalergicznych, ekologicznych produktów, które are całkowicie bezpieczne dla dzieci i zwierząt domowych. 
             <br><br>
             <strong>Jeśli plamę da się usunąć, usuniemy ją lub zwrócimy Ci pieniądze.</strong>
         </div>
@@ -391,7 +425,7 @@
             <div class="step-card">
                 <div class="step-num">4</div>
                 <h4>Rezultat</h4>
-                <p>Odbiór pracy. Meble pozostają lekko wilgotne i całkowicie wysychają w ciągu kilku godzin.</p>
+                <p>Odbiór pracy. Meble pozostają lekko wilgotne i całkowicie wysychają w ciągu кількох godzin.</p>
             </div>
         </div>
     </section>
