@@ -262,7 +262,15 @@
         for(let i=1; i<=4; i++) { initSlider(i); }
 
         document.getElementById('whatsapp-form').addEventListener('submit', function(e) {
-            e.preventDefault();
+    e.preventDefault();
+    
+    const name = document.getElementById('client-name').value;
+    const phone = document.getElementById('client-phone').value;
+    
+    const text = `Dzień dobry! Nowe zgłoszenie ze strony.👤 Imię: ${encodeURIComponent(name)} 📞 Telefon: ${encodeURIComponent(phone)}`;
+    
+    window.open('https://whatsapp.com' + text, '_blank');
+});
             
             const name = document.getElementById('client-name').value;
             const phone = document.getElementById('client-phone').value;
