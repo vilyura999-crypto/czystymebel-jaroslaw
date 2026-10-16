@@ -224,44 +224,7 @@
             </div>
         </div>
     </section>
-
-    <section id="contact" class="section">
-        <h2 class="section-title" style="margin-bottom: 10px;">Darmowa wycena przez WhatsApp</h2>
-        <p style="color: #666; margin-bottom: 30px;">Wpisz swoje dane, a strona automatycznie otworzy czat z gotową wiadomością!</p>
-        
-        <div class="form-container">
-<div class="form-container">
-            <form action="https://whatsapp.com" method="GET" target="_blank">
-                <input type="hidden" name="phone" value="48790845370">
-                <div class="form-group">
-                    <input type="text" name="text" placeholder="Wpisz: Cześć! Chcę zamówić pranie..." required>
-                </div>
-                <button type="submit" class="btn" style="width: 100%; margin-top: 10px;">Wyślij na WhatsApp</button>
-            </form>
-        </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Profesjonalne Pranie Mebli. Wszelkie prawa zastrzeżone.</p>
-    </footer>
-
-    <script>
-        const WHATSAPP_PHONE = "48792845370"; 
-
-        function initSlider(num) {
-            const range = document.getElementById(`slider-range-${num}`);
-            const beforeImg = document.getElementById(`before-img-${num}`);
-            const handle = document.getElementById(`handle-${num}`);
-            if(range && beforeImg && handle) {
-                range.addEventListener('input', (e) => {
-                    const value = e.target.value;
-                    beforeImg.style.width = `${value}%`;
-                    handle.style.left = `${value}%`;
-                });
-            }
-        }
-        for(let i=1; i<=4; i++) { initSlider(i); }
+id="whatsappForm"
     </script>
 </body>
 </html>
