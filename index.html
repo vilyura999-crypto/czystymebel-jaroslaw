@@ -226,18 +226,18 @@
         </div>
     </section>
 
-    <section id="contact" class="section">
-        <h2 class="section-title" style="margin-bottom: 10px;">Darmowa wycena przez WhatsApp</h2>
-        <p style="color: #666; margin-bottom: 30px;">Wpisz swoje dane, a strona automatycznie otworzy czat z gotową wiadomością!</p>
-        
-        <div class="form-container">
-            <form id="whatsapp-form">
-                <div class="form-group"><input type="text" id="client-name" placeholder="Twoje imię" required></div>
-                <div class="form-group"><input type="tel" id="client-phone" placeholder="Numer telefonu (+48792845370)" required></div>
-                <button type="submit" class="btn" style="width: 100%; margin-top: 10px;">Wyślij zgłoszenie</button>
-            </form>
-        </div>
-    </section>
+   <section id="contact" class="section">
+    <h2 class="section-title" style="margin-bottom: 10px;">Darmowa wycena przez WhatsApp</h2>
+    <p style="color: #666; margin-bottom: 30px;">Wpisz swoje dane, a strona automatycznie otworzy czat z gotową wiadomością!</p>
+    <div class="form-container">
+        <form action="https://wa.me" method="GET" target="_blank">
+            <div class="form-group">
+                <input type="text" name="text" placeholder="Wpisz: Cześć! Chcę zamówić pranie..." required>
+            </div>
+            <button type="submit" class="btn" style="width: 100%; margin-top: 10px;">Wyślij na WhatsApp</button>
+        </form>
+    </div>
+</section>
 
     <footer>
         <p>&copy; 2026 Profesjonalne Pranie Mebli. Wszelkie prawa zastrzeżone.</p>
