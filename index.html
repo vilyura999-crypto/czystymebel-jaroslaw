@@ -228,12 +228,10 @@
     <h2 class="section-title" style="margin-bottom: 10px;">Darmowa wycena przez WhatsApp</h2>
     <p style="color: #666; margin-bottom: 30px;">Wpisz swoje dane, a strona automatycznie otworzy czat z gotową wiadomością!</p>
     <div class="form-container">
-        <form action="https://wa.me" method="GET" target="_blank">
-            <div class="form-group">
-                <input type="text" name="text" placeholder="Wpisz: Cześć! Chcę zamówić pranie..." required>
-            </div>
-            <button type="submit" class="btn" style="width: 100%; margin-top: 10px;">Wyślij na WhatsApp</button>
-        </form>
+        <div class="form-group">
+            <input type="text" id="customWhatsappText" placeholder="Wpisz: Cześć! Chcę zamówić pranie..." required>
+        </div>
+        <button type="button" class="btn" style="width: 100%; margin-top: 10px;" onclick="sendToWhatsapp()">Wyślij na WhatsApp</button>
     </div>
 </section>
 <footer>
