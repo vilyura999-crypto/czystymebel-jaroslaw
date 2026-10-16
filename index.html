@@ -231,11 +231,15 @@
         <p style="color: #666; margin-bottom: 30px;">Wpisz swoje dane, a strona automatycznie otworzy czat z gotową wiadomością!</p>
         
         <div class="form-container">
-            <form id="whatsapp-form">
-                <div class="form-group"><input type="text" id="client-name" placeholder="Twoje imię" required></div>
-                <div class="form-group"><input type="tel" id="client-phone" placeholder="Numer telefonu (+48...)" required></div>
-                <button type="submit" class="btn" style="width: 100%; margin-top: 10px;">Wyślij zgłoszenie</button>
+<div class="form-container">
+            <form action="https://whatsapp.com" method="GET" target="_blank">
+                <input type="hidden" name="phone" value="48790845370">
+                <div class="form-group">
+                    <input type="text" name="text" placeholder="Wpisz: Cześć! Chcę zamówić pranie..." required>
+                </div>
+                <button type="submit" class="btn" style="width: 100%; margin-top: 10px;">Wyślij na WhatsApp</button>
             </form>
+        </div>
         </div>
     </section>
 
