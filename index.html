@@ -234,6 +234,7 @@
         <button type="button" class="btn" style="width: 100%; margin-top: 10px;" onclick="sendToWhatsapp()">Wyślij na WhatsApp</button>
     </div>
 </section>
+
 <footer>
     <p>&copy; 2026 Profesjonalne Pranie Mebli. Wszelkie prawa zastrzeżone.</p>
 </footer>
@@ -241,17 +242,19 @@
 <script>
     const WHATSAPP_PHONE = "48792845370";
 
-    // Обробка форми WhatsApp
-    const form = document.getElementById('whatsappForm');
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const textInput = document.getElementById('whatsappText').value;
-            const encodedText = encodeURIComponent(textInput);
-            window.open(`https://wa.me{WHATSAPP_PHONE}?text=${encodedText}`, '_blank');
-        });
+    // Пряме відкриття чату без зайвих запитів контакту
+    function sendToWhatsapp() {
+        const textInput = document.getElementById('customWhatsappText').value;
+        if (!textInput) {
+            alert('Proszę wpisać wiadomość!');
+            return;
+        }
+        const encodedText = encodeURIComponent(textInput);
+        // Формуємо чисте пряме посилання, яке відкриває чат відразу
+        window.open(`https://wa.me{WHATSAPP_PHONE}?text=${encodedText}`, '_blank');
     }
 
+    // Ініціалізація слайдерів (До/Після)
     function initSlider(num) {
         const range = document.getElementById(`slider-range-${num}`);
         const beforeImg = document.getElementById(`before-img-${num}`);
