@@ -419,17 +419,14 @@
                 <input type="range" min="0" max="100" value="50" class="slider-range" id="slider-range-4">
             </div>
         </div>
-   <section id="contact" class="section" style="text-align: center;">
+   <section id="contact" class="section">
         <h2 class="section-title" style="margin-bottom: 10px;">Darmowa wycena przez WhatsApp</h2>
-        <p style="color: #666; margin-bottom: 30px;">Kliknij przycisk poniżej, aby otworzyć czat z gotową wiadomością!</p>
-        <div class="form-container" style="max-width: 500px;">
-            <!-- Пряме заздалегідь закодоване посилання, яке гарантовано відкриється всюди -->
-            <a href="https://wa.me..." 
-               target="_blank" 
-               class="btn btn-secondary" 
-               style="display: block; width: 100%; padding: 20px; font-size: 1.2rem; text-align: center; text-decoration: none;">
-               💬 Wyślij wiadomość na WhatsApp
-            </a>
+        <p style="color: #666; margin-bottom: 30px; text-align: center;">Wpisz swoje dane, a strona automatycznie otworzy czat z gotową wiadomością!</p>
+        <div class="form-container">
+            <div class="form-group">
+                <input type="text" id="customWhatsappText" placeholder="Wpisz: Cześć! Chcę zamówić pranie..." required>
+            </div>
+            <button type="button" class="btn" style="width: 100%; margin-top: 10px;" onclick="sendToWhatsapp()">Wyślij na WhatsApp</button>
         </div>
     </section>
 
