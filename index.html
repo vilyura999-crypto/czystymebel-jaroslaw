@@ -258,28 +258,7 @@
                 });
             }
         }
-        
         for(let i=1; i<=4; i++) { initSlider(i); }
-
-        document.getElementById('whatsapp-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const name = document.getElementById('client-name').value;
-    const phone = document.getElementById('client-phone').value;
-    
-    const text = `Dzień dobry! Nowe zgłoszenie ze strony.👤 Imię: ${encodeURIComponent(name)} 📞 Telefon: ${encodeURIComponent(phone)}`;
-    
-    window.open('https://whatsapp.com' + text, '_blank');
-});
-            
-            const name = document.getElementById('client-name').value;
-            const phone = document.getElementById('client-phone').value;
-            
-            const text = `Dzień dobry! Nowe zgłoszenie ze strony (ulotka).%0A👤 Imię: ${encodeURIComponent(name)}%0A📞 Telefon: ${encodeURIComponent(phone)}%0AChcę skorzystać ze zniżki -10% na pierwsze zamówienie.`;
-            
-            const NOMER_TELEFONA = "48792845370";
-window.open('https://whatsapp.com' + NOMER_TELEFONA + '&text=' + text, '_blank');
-        });
     </script>
 </body>
 </html>
